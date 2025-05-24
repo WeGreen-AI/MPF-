@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MPF投資助理</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="portfolio.js"></script>
+    <script src="comparison.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="chat-container">
+            <div class="chat-header">
+                <img src="https://cdn-icons-png.flaticon.com/512/1698/1698535.png" alt="Bot Avatar" class="bot-avatar">
+                <h1>MPF投資助理</h1>
+            </div>
+            <div class="chat-messages" id="chat-messages">
+                <!-- 聊天訊息會在這裡動態添加 -->
+            </div>
+            <div class="chat-input-container">
+                <input type="text" id="user-input" placeholder="輸入您的問題..." autocomplete="off">
+                <button id="send-button">發送</button>
+            </div>
+        </div>
+
+        <!-- 基金比較部分（初始隱藏） -->
+        <div id="comparison-section" class="section hidden">
+            <div class="comparison-container">
+                <div class="chart-container">
+                    <canvas id="comparison-chart"></canvas>
+                </div>
+                <div id="risk-adjusted-chart"></div>
+                <div id="comparison-table-container"></div>
+            </div>
+            <div class="fund-cards-container" id="fund-cards"></div>
+            <button id="close-comparison" class="action-button">返回對話</button>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
